@@ -7,17 +7,17 @@ input.onButtonPressed(Button.B, function () {
     status = 1
     if (input.lightLevel() < 10) {
         led.setBrightness(10)
-        basic.showLeds(`
-            # # # # #
-            # # # # #
-            # # # # #
-            # # # # #
-            # # # # #
-            `)
-        basic.pause(1000)
     } else {
         led.setBrightness(input.lightLevel())
     }
+    basic.showLeds(`
+        # # # # #
+        # # # # #
+        # # # # #
+        # # # # #
+        # # # # #
+        `)
+    basic.pause(1000)
     status = 0
 })
 let status = 0
