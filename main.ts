@@ -1,5 +1,6 @@
 input.onButtonPressed(Button.A, function () {
     status = 3 - status
+    basic.clearScreen()
     led.setBrightness(128)
     basic.showNumber(input.lightLevel())
     status = 3 - status
