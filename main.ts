@@ -17,7 +17,7 @@ basic.forever(function () {
         255
         )
     } else if (status == 1) {
-        led.setBrightness(5 + input.lightLevel() * 0.9765625)
+        led.setBrightness(255 - input.lightLevel())
         basic.showLeds(`
             # # # # #
             # # # # #
