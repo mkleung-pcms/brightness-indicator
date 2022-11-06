@@ -12,10 +12,10 @@ status = 0
 basic.forever(function () {
     if (status == 0) {
         led.setBrightness(128)
-        basic.clearScreen()
-        for (let index = 0; index <= Math.round(input.lightLevel() * 0.09375 + 1); index++) {
-            led.plot(Math.trunc((index - 1) / 5), (index - 1) % 5)
-        }
+        led.plotBarGraph(
+        input.lightLevel(),
+        255
+        )
     } else if (status == 1) {
         led.setBrightness(5 + input.lightLevel() * 0.9765625)
         basic.showLeds(`
